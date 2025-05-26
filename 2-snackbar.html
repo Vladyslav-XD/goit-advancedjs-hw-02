@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <script type="module" crossorigin src="/goit-advancedjs-hw-02/2-snackbar.js"></script>
+  <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-02/assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-02/assets/vendor-BbbuE1sJ.js">
+  <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-02/assets/vendor-CZjNVMTf.css">
+</head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+    }
+
+    .form label {
+        margin-bottom: 10px;
+    }
+
+    .form input[type="number"] {
+        width: 100%;
+        padding: 5px;
+        margin-top: 5px;
+    }
+
+    .form fieldset {
+        margin-top: 10px;
+    }
+
+    .form button {
+        margin-top: 10px;
+        padding: 5px 10px;
+    }
+    .form fieldset legend {
+        font-weight: bold;
+    }
+    .form fieldset label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .form fieldset input[type="radio"] {
+        margin-right: 5px;
+    }
+    .form button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+    .form button:enabled {
+        cursor: pointer;
+    }
+    .form button:enabled:hover {
+        background-color: #007bff;
+        color: white;
+    }
+    .form button:disabled:hover {
+        background-color: #ccc;
+        color: #666;
+    }
+    .form button:enabled:focus {
+        outline: 2px solid #007bff;
+        outline-offset: 2px;
+    }
+    .form button:disabled:focus {
+        outline: none;
+    }
+    .form input[type="radio"]:focus {
+        outline: 2px solid #007bff;
+        outline-offset: 2px;
+    }
+    .form input[type="radio"]:disabled {
+        cursor: not-allowed;
+    }   
+</style>
+
+<body>
+    <form class="form">
+        <label>
+            Delay (ms)
+            <input type="number" name="delay" required />
+        </label>
+
+        <fieldset>
+            <legend>State</legend>
+            <label>
+                <input type="radio" name="state" value="fulfilled" required />
+                Fulfilled
+            </label>
+            <label>
+                <input type="radio" name="state" value="rejected" required />
+                Rejected
+            </label>
+        </fieldset>
+
+        <button type="submit">Create notification</button>
+    </form>
+</body>
+
+</html>
